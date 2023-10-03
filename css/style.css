@@ -1,0 +1,368 @@
+@import url(./fonts.css);
+@import url(./media.css);
+:root {
+  --title-orange: #ff8a56;
+  --btn: #000;
+  --menu-link: #000;
+  --alink: #000;
+  --header-text: #666666;
+  --project-title: #b16cea;
+  --white-100: hsl(206, 5%, 100%);
+  --black-300: hsl(210, 20%, 6%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Monsterrat" !important;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+  height: -webkit-fill-available;
+}
+
+a {
+  text-decoration: none !important;
+}
+li {
+  list-style: none;
+}
+
+/* header */
+
+.header-logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--alink);
+  transition: 500ms;
+}
+
+.header-logo:hover {
+  transform: scaleY(-1);
+}
+
+.header-menu li {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header-link {
+  color: var(--alink);
+  font-size: 18px;
+}
+
+.navbar-nav {
+  margin-left: auto !important;
+}
+
+.header-menu li::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -100%; /* Начальное положение подчеркивания за пределами элемента слева */
+  width: 100%;
+  height: 2px;
+  background-color: var(--alink); /* Цвет подчеркивания */
+  transition: left 0.3s ease; /* Плавное изменение положения слева */
+}
+
+/* При наведении сдвигаем подчеркивание вправо */
+.header-menu li:hover::before {
+  left: 0; /* Подчеркивание сдвигается влево и становится видимым */
+}
+
+.navbar-toggler {
+  border: none !important;
+  background: #dddddd !important;
+  border-radius: 50px !important;
+  padding: 10px !important;
+  color: #000 !important;
+}
+
+/* header content */
+.header-content {
+  padding-top: 50px;
+  margin-top: 30px;
+  padding-left: 80px;
+}
+
+.header-title {
+  color: var(--title-orange);
+  font-size: 72px;
+  line-height: 82.5px;
+}
+
+.header-span {
+  color: #000;
+  font-size: 65px;
+  line-height: 82.5px;
+}
+
+.header-desc {
+  color: var(--header-text);
+  font-size: 22px;
+  line-height: 33px;
+  margin-top: 35px;
+}
+
+.header-content .row {
+  gap: 80px;
+}
+
+/* header btns */
+.header-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.header-btn {
+  width: 6.5em;
+  height: 50px;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: none;
+  /* border-radius: 5% 25px; */
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.header-btn:hover {
+  color: black;
+}
+
+.header-btn:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+.header-btn:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.Btn {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+}
+
+.svgIcon {
+  fill: var(--title-orange);
+}
+
+.icon2 {
+  width: 18px;
+  height: 5px;
+  border-bottom: 2px solid var(--title-orange);
+  border-left: 2px solid var(--title-orange);
+  border-right: 2px solid var(--title-orange);
+}
+
+.tooltip {
+  position: absolute;
+  right: -105px;
+  opacity: 0;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.2s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgb(12, 12, 12);
+  background-size: 1000%;
+  background-position: center;
+  transform: rotate(45deg);
+  left: -5%;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .tooltip {
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover {
+  background-color: var(--title-orange);
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .icon2 {
+  border-bottom: 2px solid rgb(235, 235, 235);
+  border-left: 2px solid rgb(235, 235, 235);
+  border-right: 2px solid rgb(235, 235, 235);
+}
+
+.Btn:hover .svgIcon {
+  fill: rgb(255, 255, 255);
+  animation: slide-in-top 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* main  */
+
+.main-service {
+  margin-top: 120px;
+}
+.main-subtitle {
+  color: var(--title-orange);
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.main-title {
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* service  */
+.main-services {
+  margin-top: 80px !important;
+  margin-bottom: 80px;
+}
+
+.service-title {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.service-desc {
+  color: var(--header-text);
+  line-height: 28px;
+}
+
+.main-service {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-ul li {
+  list-style: inside;
+  font-weight: 500;
+}
+
+/* main project */
+.main-project {
+  margin-top: 80px;
+}
+
+.project-subtitle {
+  color: var(--project-title);
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-size: 54px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #000;
+}
+
+.project-btn {
+  background: #000;
+  color: white;
+  height: 50px;
+}
+
+/* swiper js */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.section {
+  margin: 0 auto;
+  padding-block: 5rem;
+}
+
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.75;
+  border-radius: 50%;
+  color: var(--white-100);
+  background: var(--black-300);
+}
+
+.swiper-img {
+  width: 180px;
+  height: 280px;
+  object-fit: cover;
+}

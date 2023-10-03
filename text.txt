@@ -1,0 +1,17 @@
+      <div class="header-nav d-flex justify-content-between mt-3">
+ <a href="#" class="header-logo">fkhamroev</a>
+        <button class="header-burger">
+            <i class="fa-solid fa-bars" style="color: #000000;"></i>
+        </button>
+        <ul class="header-menu d-flex">
+          <li><a href="#" class="header-link">About</a></li>
+          <li><a href="#" class="header-link">Services</a></li>
+          <li><a href="#" class="header-link">Projects</a></li>
+          <li>
+            <a href="#" class="header-link"
+              >Book a call
+              <i class="fa-solid fa-arrow-right" style="color: #000000"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
