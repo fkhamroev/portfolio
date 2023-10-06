@@ -7,7 +7,6 @@
   --alink: #000;
   --header-text: #666666;
   --project-title: #b16cea;
-
 }
 
 body {
@@ -329,7 +328,6 @@ li {
   padding: 60px 0;
 }
 
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -377,9 +375,36 @@ li {
   text-decoration: underline;
 }
 
-/* main about */
-.main-about {
+/* about */
+.about {
   background: #000;
-  height: 100vh;
-  margin-top: -180px;
+  margin-top: -150px;
+  padding-top: 150px;
 }
+
+.about-content {
+  margin-top: 50px;
+}
+
+.about-subtitle {
+  color: var(--title-orange);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+  margin-bottom: 15px;
+}
+
+.about-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 60px;
+}
+
+.about-desc {
+  color: #fff;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: justify;
+}
+
