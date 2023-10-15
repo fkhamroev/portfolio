@@ -255,24 +255,30 @@
               <h1 class="form-title">Let's get on a call.</h1>
             </div>
             <div class="col-6">
-              <form class="form" action="./form/form.php" method="post" id="myForm">
+              <form class="form" id="myForm">
                 <label for="name">Name</label>
                 <input
                   type="text"
                   class="form-name"
                   placeholder="Enter your name"
+                  id="name"
+                  name="name"
                 />
                 <label for="email">Email</label>
                 <input
                   type="email"
                   class="form-name"
                   placeholder="Enter your Email"
+                  id="email"
+                  name="email"
                 />
                 <label for="message">Message</label>
                 <input
                   type="text"
                   class="form-name"
                   placeholder="Type your message"
+                  id="message"
+                  name="message"
                 />
                 <input type="submit" class="form-submit" value="Submit" />
               </form>
