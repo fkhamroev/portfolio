@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sent = mail($to, $subject, $message, $headers);
     
     if ($sent) {
-        header('../pages/thanks.html');
+        echo "succes";
     }
     else {
         echo "Error";
