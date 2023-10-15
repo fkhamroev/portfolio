@@ -15,11 +15,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sent = mail($to, $subject, $message, $headers);
     
     if ($sent) {
-        header('../pages/thanks.html')
-    } else {
-        echo "Ошибка при отправке сообщения.";
+        header('../pages/thanks.html');
     }
-} else {
-    echo "Данные формы не были отправлены.";
+    else {
+        echo "Error";
+    }
 }
-?>
+
