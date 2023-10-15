@@ -46,7 +46,7 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
   })
     .then(function (response) {
       if (response.ok) {
-        alert("Ваше сообщение успешно отправлено.");
+        window.location("../pages/thanks.html");
       } else {
         alert("Произошла ошибка при отправке сообщения.");
       }
