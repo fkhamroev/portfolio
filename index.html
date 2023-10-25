@@ -21,40 +21,62 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="./style.css" />
-
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
 
   <body>
     <header class="header container">
-      <nav class="navbar navbar-expand-lg header-nav">
-        <a href="#" class="navbar-brand header-logo">fkhamroev</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Переключатель навигации"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="header-menu navbar-nav">
-            <li><a href="#" class="header-link">About</a></li>
-            <li><a href="#" class="header-link">Services</a></li>
-            <li><a href="#" class="header-link">Projects</a></li>
-            <li>
-              <a href="#" class="header-link"
-                >Book a call
-                <i class="fa-solid fa-arrow-right" style="color: #000000"></i
-              ></a>
-            </li>
-          </ul>
+      <nav class="header-navbar">
+        <div>
+          <a href="#" class="header-logo"
+            >fkhamroev <span class="logo-span"><p>■</p></span></a
+          >
         </div>
+        <button class="header-burger">
+          <i class="fa-solid fa-bars" style="color: #000000"></i>
+        </button>
+        <ul class="header-menu">
+          <li><a href="#service" class="header-link">Services</a></li>
+          <li><a href="#projects" class="header-link">Projects</a></li>
+          <li><a href="#about" class="header-link">About</a></li>
+          <li>
+            <a href="tel:+998914410701" class="link">
+              <span class="mask">
+                <div class="link-container">
+                  <span class="link-title1 title">Book a call</span>
+                  <span class="link-title2 title">Call me</span>
+                </div>
+              </span>
+              <div class="link-icon">
+                <svg
+                  class="icon"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                >
+                  <path
+                    d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                  />
+                </svg>
+                <svg
+                  class="icon"
+                  width="24"
+                  height="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                >
+                  <path
+                    d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z"
+                  />
+                </svg>
+              </div>
+            </a>
+          </li>
+        </ul>
       </nav>
       <section class="header-content">
         <div class="row">
@@ -69,7 +91,7 @@
               <a href="tel:+998914410701"
                 ><button class="header-btn">Book a call</button></a
               >
-              <a href="./files/Хамроев Фируз.pdf" download>
+              <a href="./files/Хамроев Фируз Фуркат угли (1).pdf" download>
                 <button class="Btn">
                   <svg
                     class="svgIcon"
@@ -91,93 +113,105 @@
             <img
               src="./img/ab3318fc-7dc7-41b9-86bf-0442d266bbe5.png"
               alt=""
-              width="500px"
+              
             />
           </div>
         </div>
       </section>
     </header>
     <main class="main">
-      <section class="main-service container">
+      <section id="service" class="main-service container">
         <h3 class="main-subtitle text-center">Services</h3>
         <h1 class="main-title text-center">
           Creating web solutions that address issues, one project at a time
         </h1>
         <div class="main-services row">
-          <div class="main-service col-4">
-            <video
-              src="./files/free-animated-icon-document-6172540.mp4"
-              autoplay
-              muted
-              loop
-              width="70px"
-              height="70px"
-            ></video>
-            <h2 class="service-title">What I can do for you</h2>
-            <p class="service-desc">
-              Faster, better products that your users love. Here's all the
-              services I provide:
-            </p>
-            <ul class="service-ul">
-              <li class="service-li">User Interface Development</li>
-              <li class="service-li">Layout and development</li>
-              <li class="service-li">Performance optimization</li>
-            </ul>
+          <div class="main-service col-12 col-lg-4">
+            <div class="service-content">
+              <video
+                src="./files/free-animated-icon-document-6172540.mp4"
+                autoplay
+                muted
+                loop
+                width="70px"
+                height="70px"
+              ></video>
+              <div class="service-text">
+                <h2 class="service-title">What I can do for you</h2>
+                <p class="service-desc">
+                  Faster, better products that your users love. Here's all the
+                  services I provide:
+                </p>
+                <ul class="service-ul">
+                  <li class="service-li">User Interface Development</li>
+                  <li class="service-li">Layout and development</li>
+                  <li class="service-li">Performance optimization</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="main-service col-4">
-            <video
-              src="./files/application.mp4"
-              autoplay
-              muted
-              loop
-              width="70px"
-              height="70px"
-            ></video>
-            <h2 class="service-title">Technologies i use</h2>
-            <p class="service-desc">
-              Every web developer requires the appropriate tools to excel in
-              their work.
-            </p>
-            <ul class="service-ul">
-              <li class="service-li">
-                Html, Css, JS, Bootstrap, JQuery, React.js
-              </li>
-              <li class="service-li">Wordpress, Elementor, MySql</li>
-              <li class="service-li">Php, Laravel</li>
-              <li class="service-li">Figma</li>
-            </ul>
+
+          <div class="main-service col-12 col-lg-4">
+            <div class="service-content">
+              <video
+                src="./files/application.mp4"
+                autoplay
+                muted
+                loop
+                width="70px"
+                height="70px"
+              ></video>
+              <div class="service-text">
+                <h2 class="service-title">Technologies i use</h2>
+                <p class="service-desc">
+                  Every web developer requires the appropriate tools to excel in
+                  their work.
+                </p>
+                <ul class="service-ul">
+                  <li class="service-li">
+                    Html, Css, JS, Bootstrap, JQuery, React.js
+                  </li>
+                  <li class="service-li">Wordpress, Elementor, MySql</li>
+                  <li class="service-li">Php, Laravel</li>
+                  <li class="service-li">Figma</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="main-service col-4">
-            <video
-              src="./files/expect.mp4"
-              autoplay
-              muted
-              loop
-              width="70px"
-              height="70px"
-            ></video>
-            <h2 class="service-title">What you can expect</h2>
-            <p class="service-desc">
-              I create web solutions that go beyond aesthetics. I ensure they
-              are deployable and user-friendly.
-            </p>
-            <ul class="service-ul">
-              <li class="service-li">High quality performance</li>
-              <li class="service-li">Deadlines</li>
-              <li class="service-li">Support and Maintenance</li>
-              <li class="service-li">Professionalism and communication</li>
-            </ul>
+          <div class="main-service col-12 col-lg-4">
+            <div class="service-content">
+              <video
+                src="./files/expect.mp4"
+                autoplay
+                muted
+                loop
+                width="70px"
+                height="70px"
+              ></video>
+              <div class="service-text">
+                <h2 class="service-title">What you can expect</h2>
+                <p class="service-desc">
+                  I create web solutions that go beyond aesthetics. I ensure
+                  they are deployable and user-friendly.
+                </p>
+                <ul class="service-ul">
+                  <li class="service-li">High quality performance</li>
+                  <li class="service-li">Deadlines</li>
+                  <li class="service-li">Support and Maintenance</li>
+                  <li class="service-li">Professionalism and communication</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <section class="main-project container">
+      <section id="projects" class="main-project container">
         <div class="d-flex justify-content-between">
           <div class="project-title">
             <h2 class="project-subtitle">Projects</h2>
             <h1 class="project-title">I bring results</h1>
             <h1 class="project-title">My clients are proof</h1>
           </div>
-          <button class="project-btn">View all projects</button>
         </div>
       </section>
       <section class="slider-section container">
@@ -232,7 +266,7 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="about-content container conic text-center">
           <h2 class="about-subtitle">Web developer</h2>
           <h1 class="about-title">That's me!</h1>
@@ -248,14 +282,14 @@
       <section class="main-form">
         <div class="container">
           <div class="row">
-            <div class="col-6">
+            <div class="col-12 col-lg-6">
               <h1 class="form-title form-title-color">
                 Ready to make something kickass?
               </h1>
               <h1 class="form-title">Let's get on a call.</h1>
             </div>
-            <div class="col-6">
-              <form class="form" id="myForm" netlify action="./pages/thanks.html">
+            <div class="col-12 col-lg-6">
+              <form class="form" method="" action="./pages/thanks.html">
                 <label for="name">Name</label>
                 <input
                   type="text"

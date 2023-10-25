@@ -38,50 +38,42 @@ li {
   font-weight: 700;
   color: var(--alink);
   transition: 500ms;
+  display: flex;
+}
+
+.logo-span {
+  color: var(--title-orange);
+  display: flex;
+  align-items: flex-end; 
 }
 
 .header-logo:hover {
   transform: scaleY(-1);
 }
 
-.header-menu li {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  margin-right: 20px;
+
+.header-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
 }
 
 .header-link {
-  color: var(--alink);
-  font-size: 18px;
+  color: #000;
+  font-size: 16px;
+  line-height: 28px;
+  margin-left: 40px;
+  font-weight: 500;
+  display: block;
 }
 
-.navbar-nav {
-  margin-left: auto !important;
-}
-
-.header-menu li::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: -100%; /* Начальное положение подчеркивания за пределами элемента слева */
-  width: 100%;
-  height: 2px;
-  background-color: var(--alink); /* Цвет подчеркивания */
-  transition: left 0.3s ease; /* Плавное изменение положения слева */
-}
-
-/* При наведении сдвигаем подчеркивание вправо */
-.header-menu li:hover::before {
-  left: 0; /* Подчеркивание сдвигается влево и становится видимым */
-}
-
-.navbar-toggler {
-  border: none !important;
-  background: #dddddd !important;
-  border-radius: 50px !important;
-  padding: 10px !important;
-  color: #000 !important;
+.header-burger {
+  display: none;
 }
 
 /* header content */
@@ -114,6 +106,9 @@ li {
   gap: 80px;
 }
 
+.header-photo img {
+  width: 500px;
+}
 /* header btns */
 .header-btns {
   display: flex;
@@ -318,11 +313,7 @@ li {
   color: #000;
 }
 
-.project-btn {
-  background: #000;
-  color: white;
-  height: 50px;
-}
+
 
 /* swiper js */
 .slider-section {
@@ -519,7 +510,7 @@ li {
 
 .main-form .row:nth-child(1) {
   display: flex;
-  align-items:center;
+  align-items: center;
 }
 
 .form {
@@ -567,7 +558,6 @@ li {
   color: white;
 }
 
-
 /* -----------  footer        -------------------- */
 
 .footer {
@@ -588,3 +578,131 @@ li {
   padding: 5px;
   display: block;
 }
+
+/* ------------- links hover effects ------------- */
+
+
+.link {
+  height: 30px;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+}
+
+/* Hide extra text */
+.mask {
+  position: relative;
+  padding: 0;
+  height: 20px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.link-container {
+  transition: transform 0.4s ease;
+}
+
+.title {
+  display: block;
+
+  /*  Set same font-size and line height  */
+  font-size: 16px;
+  line-height: 20px;
+  transition: transform 0.4s ease;
+  margin-left: 40px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+.link-title1 {
+  transform-origin: right center;
+}
+
+.link-title2 {
+  transform-origin: left center;
+  transform: rotate(20deg);
+}
+
+.link-icon {
+  position: relative;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+
+  /*  Remove overflow to see how it works　:) */
+  overflow: hidden;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  transition: transform 0.4s ease;
+}
+
+.icon:nth-child(2) {
+  transform: translate(-40px);
+}
+
+/* Hover Action*/
+
+/* Move up two texts (20px = font-size) */
+.link:hover .link-container {
+  transform: translateY(-20px);
+}
+
+/* Rotate texts a little bit */
+.link:hover .link-title1 {
+  transform: rotate(20deg);
+}
+
+.link:hover .link-title2 {
+  transform: rotate(0);
+}
+
+/* Move arrows to right */
+.link:hover .icon:first-child {
+  transform: translate(40px);
+}
+
+.link:hover .icon:nth-child(2) {
+  transform: translate(0px);
+}
+
+.header-link, .swiper-link{
+  position: relative;
+}
+
+.header-link::before, .swiper-link::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #18272F;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+.header-link:hover::before, .swiper-link:hover:before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.swiper-link {
+  padding-bottom: 5px;
+}
+
+.header-menu {
+  margin-top: 15px;
+}
+
+/* --------------------------------- */
