@@ -2,6 +2,10 @@
   .header-menu {
     display: none !important;
   }
+
+  .header-burger {
+    display: block;
+  }
   .header-content {
     text-align: center;
   }
@@ -88,14 +92,41 @@
         max-width: 400px;
         width: 100%;
     }
-    .header-title, .header-span {
-        font-size: 30px !important;
+    .header-title, .header-span, .main-title, .about-title, .form-title, .project-title {
+        font-size: 32px !important;
         line-height: 35px !important;
     }
     .header-logo {
         font-size: 18px !important;
     }
-    .header-btn {
-        
+    .header-content .row {
+      gap: 0 !important;
     }
-}
+    .header-btn {
+      width: 150px !important;
+      font-size: 16px !important;
+
+    }
+    .header-btns {
+      margin-top: 0 !important;
+      justify-content: space-between;
+    }
+
+    .swiper-title {
+      font-size: 18px !important;
+    }
+
+    .swiper-link {
+      font-size: 16px !important;
+    }
+
+    .form {
+      padding: 20px !important;
+    } 
+
+    .form input {
+      min-height: 35px;
+      height: 100%;
+      padding: 10px;
+    }
+  }
