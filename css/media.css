@@ -1,9 +1,9 @@
 @media (max-width: 992px) {
   .header-menu {
-    /* display: none !important; */
+    display: none !important;
     flex-direction: column;
     align-items: flex-start;
-    right: -100%; /* Initially position the menu off-screen to the right */
+    right: 0; /* Initially position the menu off-screen to the right */
     position: absolute;
     top: 0;
     text-align: left;
@@ -11,7 +11,7 @@
     z-index: 9;
     background: black;
     margin-top: 0 !important;
-    width: 30%;
+    width: 0%;
     transition: right 1s ease; /* Add a transition for the 'right' property */
     padding-top: 50px;
   }
@@ -21,9 +21,10 @@
   }
 
   .header-menu.show {
-    right: 0; /* Move the menu to the right when the 'show' class is present */
+    width: 30%; /* Move the menu to the right when the 'show' class is present */
+    display: flex !important;
   }
-  
+
   .header-link {
     color: white !important;
     margin-left: 0 !important;
@@ -142,12 +143,12 @@
 
 @media (max-width: 576px) {
   .header-photo img {
-    max-width: 400px !important;
+    max-width: 300px !important;
     width: 100%;
   }
 
   .header-menu {
-    width: 45%;
+    width: 50%;
   }
   .header-link {
     font-size: 20px !important;
