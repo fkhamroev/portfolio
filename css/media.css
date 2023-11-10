@@ -39,6 +39,10 @@
     font-size: 18px;
   }
 
+    .mask, .link  {
+      display: none;
+    }
+
   .header-burger {
     display: inline !important;
     border: solid 1px #ff8a56;
@@ -136,6 +140,16 @@
     max-width: 400px;
     width: 100%;
   }
+
+  .header-menu {
+    width: 45%;
+  }
+  .header-link {
+    font-size: 20px !important;
+    line-height: 25px !important;
+    margin-bottom: 15px;
+  }
+  
   .header-title,
   .header-span,
   .main-title,
