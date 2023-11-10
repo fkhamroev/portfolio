@@ -705,4 +705,8 @@ li {
   margin-top: 15px;
 }
 
+.header-close {
+  display: none;
+}
+
 /* --------------------------------- */

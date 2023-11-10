@@ -30,3 +30,34 @@ submit.addEventListener("submit", function (e) {
   e.preventDefault();
   redirectToPage();
 });
+
+let burger = document.querySelector(".header-burger");
+let menu = document.querySelector(".header-menu");
+let close = document.querySelector(".header-close");
+
+function closeMenu() {
+  menu.classList.remove("show");
+}
+close.addEventListener("click", function (e) {
+  e.preventDefault();
+  closeMenu();
+});
+
+burger.addEventListener("click", function (e) {
+  e.preventDefault();
+  menu.classList.toggle("show");
+});
+var menuItems = document.querySelectorAll(".header-link");
+menuItems.forEach(function (item) {
+  item.addEventListener("click", function () {
+    menu.classList.remove("show");
+  });
+});
+document.addEventListener("click", function (event) {
+  var isClickInsideMenu = menu.contains(event.target);
+  var isClickInsideButton = burger.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickInsideButton) {
+    closeMenu();
+  }
+});

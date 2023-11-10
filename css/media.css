@@ -1,11 +1,55 @@
 @media (max-width: 992px) {
   .header-menu {
-    display: none !important;
+    /* display: none !important; */
+    flex-direction: column;
+    align-items: flex-start;
+    right: -100%; /* Initially position the menu off-screen to the right */
+    position: absolute;
+    top: 0;
+    text-align: left;
+    height: 100%;
+    z-index: 9;
+    background: black;
+    margin-top: 0 !important;
+    width: 30%;
+    transition: right 1s ease; /* Add a transition for the 'right' property */
+    padding-top: 50px;
+  }
+
+  .header-menu.show {
+    right: 0 ; /* Move the menu to the right when the 'show' class is present */
+  }
+
+  .header-link {
+    color: white !important;
+    margin-left: 0 !important;
+    text-align: left;
+    font-size: 25px !important;
+    line-height: 30px !important;
+    margin-bottom: 20px;
+  }
+  
+  .header-close {
+    display: block !important;
+    background: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-size: 18px;
   }
 
   .header-burger {
-    display: block;
+    display: inline !important;
+    border: solid 1px #ff8a56;
+    background: none;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 22px;
+    padding: 10px 15px;
+    margin-top: 10px;
   }
+
   .header-content {
     text-align: center;
   }
@@ -83,50 +127,54 @@
   .form label {
     font-size: 20px !important;
     line-height: 25px !important;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
   }
 }
 
-@media (max-width:576px) {
-    .header-photo img {
-        max-width: 400px;
-        width: 100%;
-    }
-    .header-title, .header-span, .main-title, .about-title, .form-title, .project-title {
-        font-size: 32px !important;
-        line-height: 35px !important;
-    }
-    .header-logo {
-        font-size: 18px !important;
-    }
-    .header-content .row {
-      gap: 0 !important;
-    }
-    .header-btn {
-      width: 150px !important;
-      font-size: 16px !important;
-
-    }
-    .header-btns {
-      margin-top: 0 !important;
-      justify-content: space-between;
-    }
-
-    .swiper-title {
-      font-size: 18px !important;
-    }
-
-    .swiper-link {
-      font-size: 16px !important;
-    }
-
-    .form {
-      padding: 20px !important;
-    } 
-
-    .form input {
-      min-height: 35px;
-      height: 100%;
-      padding: 10px;
-    }
+@media (max-width: 576px) {
+  .header-photo img {
+    max-width: 400px;
+    width: 100%;
   }
+  .header-title,
+  .header-span,
+  .main-title,
+  .about-title,
+  .form-title,
+  .project-title {
+    font-size: 32px !important;
+    line-height: 35px !important;
+  }
+  .header-logo {
+    font-size: 18px !important;
+  }
+  .header-content .row {
+    gap: 0 !important;
+  }
+  .header-btn {
+    width: 150px !important;
+    font-size: 16px !important;
+  }
+  .header-btns {
+    margin-top: 0 !important;
+    justify-content: space-between;
+  }
+
+  .swiper-title {
+    font-size: 18px !important;
+  }
+
+  .swiper-link {
+    font-size: 16px !important;
+  }
+
+  .form {
+    padding: 20px !important;
+  }
+
+  .form input {
+    min-height: 35px;
+    height: 100%;
+    padding: 10px;
+  }
+}
